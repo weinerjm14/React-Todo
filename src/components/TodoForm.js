@@ -1,8 +1,7 @@
 import React from "react";
-import { render } from "@testing-library/react";
 
-const Form = (props) => {
-  render(
+const Form = () => {
+  return (
     <section className="inputForm">
       <label htmlFor="todoText">Enter Todo</label>
       <input type="text" name="todoText" />
