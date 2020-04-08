@@ -1,8 +1,14 @@
 import React from "react";
 
-const todoCard = (props) => {
-  <section className="todoCard" id="props.id">
-    <input type="checkbox" />
-    <p>props.todo</p>
-  </section>;
-};
+class todoCard extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    <section className="todoCard" id="props.id">
+      <input type="checkbox" />
+      <p>props.name</p>
+    </section>;
+  }
+}
+export default todoCard;
