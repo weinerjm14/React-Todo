@@ -3,8 +3,8 @@ import React from "react";
 const ToDoCard = (props) => {
   console.log("TDCard", props);
   return (
-    <section className="todoCard">
-      <input type="checkbox" name="complete" />
+    <section className={`item${props.item.complete ? "complete" : ""}`}>
+      <input type="checkbox" name="complete" onChange={props.toggleItem} />
       <p>{props.item.name}</p>
     </section>
   );
