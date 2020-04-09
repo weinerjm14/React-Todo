@@ -28,8 +28,14 @@ class Form extends React.Component {
             value={this.state.item}
             onChange={this.handleChanges}
           />
-          <button type="submit">Submit</button>
-          <button type="button" onClick={this.props.clearComplete}>
+          <button type="submit" className="addItem">
+            Add Task
+          </button>
+          <button
+            type="button"
+            onClick={this.props.clearComplete}
+            className="clearComplete"
+          >
             Clear Completed
           </button>
         </form>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./components/Todo.css";
 import Form from "./components/TodoForm";
 import ToDoList from "./components/TodoList";
 const toDoItem = [
@@ -62,7 +62,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <h2>Welcome to the Task Master To Do App</h2>
         <ToDoList todo={this.state.toDoItem} toggleItem={this.toggleItem} />
         <Form addItem={this.addItem} clearComplete={this.clearComplete} />
       </div>
