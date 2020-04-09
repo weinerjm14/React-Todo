@@ -8,8 +8,14 @@ p {
   font-family: "IBM Plex Mono", monospace;
 }
 #root {
-  background-image: image("waterfall.jpg");
+  background-image: url("/waterfall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: blanchedalmond;
+  height: 90vh;
+}
+.app-container {
+  background-color: rgba(255, 255, 240, 0.5);
   height: 90vh;
 }
 .list-item {
