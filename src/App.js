@@ -1,7 +1,7 @@
 import React from "react";
 
 import Form from "./components/TodoForm";
-
+import ToDoList from "./components/TodoList";
 const toDoItem = [
   {
     id: 1586387996621,
@@ -22,13 +22,14 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      toDoItem,
+      toDoItem: { toDoItem },
     };
   }
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <ToDoList todo={toDoItem} />
         <Form />
       </div>
     );
