@@ -4,14 +4,14 @@ import Form from "./components/TodoForm";
 import ToDoList from "./components/TodoList";
 const toDoItem = [
   {
+    name: "Homework Project",
     id: 1586387996621,
     complete: false,
-    name: "Homework Project",
   },
   {
+    name: "Write Blog Post",
     id: 1586388155300,
     complete: false,
-    name: "Write Blog Post",
   },
 ];
 
@@ -53,12 +53,18 @@ class App extends React.Component {
       }),
     });
   };
+  clearComplete = (e) => {
+    e.preventDefault();
+    this.setState({
+      toDoItem: this.state.toDoItem.filter((item) => !item.complete),
+    });
+  };
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
         <ToDoList todo={this.state.toDoItem} toggleItem={this.toggleItem} />
-        <Form addItem={this.addItem} />
+        <Form addItem={this.addItem} clearComplete={this.clearComplete} />
       </div>
     );
   }

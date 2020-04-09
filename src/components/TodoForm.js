@@ -9,7 +9,6 @@ class Form extends React.Component {
   }
   handleChanges = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state.item);
   };
 
   submitItem = (e) => {
@@ -30,7 +29,9 @@ class Form extends React.Component {
             onChange={this.handleChanges}
           />
           <button type="submit">Submit</button>
-          <button type="button">Clear Completed</button>
+          <button type="button" onClick={this.props.clearComplete}>
+            Clear Completed
+          </button>
         </form>
       </section>
     );
